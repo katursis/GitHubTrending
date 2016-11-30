@@ -1,7 +1,7 @@
 {
   "scheduler": {
     "publishing": "5,35 * * * *",
-    "updatingContainer": "0 */6 * * *"
+    "updatingContainer": "0 */3 * * *"
   },
   "database": {
     "sqlite": {
