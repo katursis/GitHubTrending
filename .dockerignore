@@ -1,0 +1,8 @@
+.gitignore
+
+Dockerfile
+
+node_modules
+
+trending_repos.sqlite
+

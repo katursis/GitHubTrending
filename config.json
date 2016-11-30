@@ -1,0 +1,20 @@
+{
+  "scheduler": {
+    "publishing": "5,35 * * * *",
+    "updatingContainer": "0 */6 * * *"
+  },
+  "database": {
+    "sqlite": {
+      "dialect": "sqlite3",
+      "connection": {
+        "filename": "./trending_repos.sqlite"
+      },
+      "useNullAsDefault": true
+    }
+  },
+  "subscribers": {
+    "stdout": {
+      "config": {}
+    }
+  }
+}
