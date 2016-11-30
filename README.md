@@ -1,0 +1,2 @@
+# GitHubTrending
+GitHub Trending publisher
