@@ -38,3 +38,6 @@ jspm_packages
 
 # RepositoriesContainer's database
 trending_repos.sqlite
+
+# PHPStorm folder
+.idea
