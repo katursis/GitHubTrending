@@ -89,7 +89,7 @@ repositoriesContainer
                     }, Promise.resolve());
                 })
                 .then(() => {
-                    util.log(`Saved`);
+                    util.log('Saved');
                 })
                 .catch(err => {
                     util.log(err);
