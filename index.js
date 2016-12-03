@@ -63,8 +63,6 @@ repositoriesContainer
 
             util.log('Getting current trending...');
 
-            let countNew = 0;
-
             gitHubApi
                 .getCurrentTrending()
                 .then(repos => {
@@ -83,7 +81,7 @@ repositoriesContainer
 
                                 return repositoriesContainer
                                     .add(repo.id)
-                                    .then(() => countNew++);
+                                    .then(() => util.log(repo.html_url));
                             })
                             .catch(err => {
                                 util.log(err);
@@ -91,7 +89,7 @@ repositoriesContainer
                     }, Promise.resolve());
                 })
                 .then(() => {
-                    util.log(`Saved ${countNew} repositories`);
+                    util.log(`Saved`);
                 })
                 .catch(err => {
                     util.log(err);
