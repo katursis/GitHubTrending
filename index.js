@@ -52,9 +52,7 @@ repositoriesContainer
                             return repositoriesContainer.markAsPublished(repo.id);
                         });
                 })
-                .catch(err => {
-                    util.log(err);
-                });
+                .catch(err => util.log(err));
         });
 
         const jobUpdatingContainer = schedule.scheduleJob(config.scheduler.updatingContainer, () => {
@@ -83,19 +81,11 @@ repositoriesContainer
                                     .add(repo.id)
                                     .then(() => util.log(repo.html_url));
                             })
-                            .catch(err => {
-                                util.log(err);
-                            });
+                            .catch(err => util.log(err));
                     }, Promise.resolve());
                 })
-                .then(() => {
-                    util.log('Saved');
-                })
-                .catch(err => {
-                    util.log(err);
-                });
+                .then(() => util.log('Saved'))
+                .catch(err => util.log(err));
         });
     })
-    .catch(err => {
-        util.log(err);
-    });
+    .catch(err => util.log(err));
