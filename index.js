@@ -19,7 +19,7 @@ repositoriesContainer
             const subscriber = require('./subscribers/' + name);
 
             if (!(subscriber instanceof pubsub.Subscriber)) {
-                return util.log(name, 'is a invalid subscriber');
+                return util.log(name, ' is a invalid subscriber');
             }
 
             publisher.subscribe(subscriber);
