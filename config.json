@@ -5,7 +5,7 @@
   },
   "database": {
     "sqlite": {
-      "dialect": "sqlite3",
+      "client": "sqlite3",
       "connection": {
         "filename": "./trending_repos.sqlite"
       },

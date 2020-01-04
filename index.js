@@ -43,11 +43,15 @@ repositoriesContainer
                     return gitHubApi
                         .getRepoById(id)
                         .then(repo => {
-                            publisher.publish({
+                            let repoData = {
                                 lang: util.normalizeLang(repo.language),
                                 description: util.normalizeDescription(repo.description),
                                 url: repo.html_url,
-                            });
+                            };
+
+                            repoData.topics = repo.topics.filter(topic => topic !== repoData.lang);
+
+                            publisher.publish(repoData);
 
                             return repositoriesContainer.markAsPublished(repo.id);
                         });
