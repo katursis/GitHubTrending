@@ -1,5 +1,5 @@
 # GitHubTrending
 GitHub Trending publisher
 
-## Channel
-https://telegram.me/githubtrending
+## Telegram channel
+https://t.me/githubtrending
